@@ -1,0 +1,51 @@
+{
+  "name": "js-custom-media",
+  "version": "1.0.0",
+  "description": "Use Custom Media Queries in JS",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "csstools/js-custom-media",
+  "homepage": "https://github.com/csstools/js-custom-media#readme",
+  "bugs": "https://github.com/csstools/js-custom-media/issues",
+  "main": "index.cjs.js",
+  "module": "index.es.mjs",
+  "files": [
+    "index.cjs.js",
+    "index.cjs.js.map",
+    "index.es.mjs",
+    "index.es.mjs.map"
+  ],
+  "scripts": {
+    "build": "rollup -c .rollup.js --silent",
+    "prepublishOnly": "npm test",
+    "pretest": "npm run build",
+    "test": "npm run test:lint",
+    "test:lint": "eslint index.js --cache --ignore-path .gitignore --quiet"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "eslint-config-dev": "^2.0.0",
+    "rollup": "^0.66.4",
+    "rollup-plugin-babel": "^4.0.3"
+  },
+  "eslintConfig": {
+    "extends": "dev",
+    "parser": "babel-eslint"
+  },
+  "keywords": [
+    "js",
+    "css",
+    "match",
+    "custom",
+    "media",
+    "query",
+    "queries",
+    "cssom"
+  ]
+}
